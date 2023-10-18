@@ -1,33 +1,30 @@
+class Person{
 
-class Person {
+   String name = "Dayat";
+   String? address;
+   final String country = "Indonesia";
 
-  String name = "Guest";
-  String? address;
-  final String country = "Indonesia";
+   Person(this.name, this.address);
 
-  Person(this.name, this.address);
+   Person.withName(this.name);
 
-  Person.withName(String name) : this(name, "No Address");
+   Person.withAddress(this.address);
 
-  Person.withAddress(String address) : this("No Name", address);
+   Person.fromGambut() : this.withAddress("Gambut");
 
-  Person.fromGambut() : this.withAddress("Gambut");
-
-  Person.withNoName() : this.withName("No Name");
-
+   Person.withNoName() : this.withName("No Name");
 }
 
 void main(){
-
   var person = Person("Dayat", "Gambut");
   print(person.name);
   print(person.address);
 
-  var person2 = Person.withName('Putra');
+  var person2 = Person.withName("Putra");
   print(person2.name);
   print(person2.address);
 
-  var person3 = Person.withAddress('Rantau');
+  var person3 = Person.withAddress("Gambut");
   print(person3.name);
   print(person3.address);
 
@@ -38,5 +35,4 @@ void main(){
   var person5 = Person.withNoName();
   print(person5.name);
   print(person5.address);
-
 }

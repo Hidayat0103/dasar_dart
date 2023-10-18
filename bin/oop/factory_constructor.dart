@@ -1,8 +1,6 @@
-
 class Database {
-
   Database(){
-    print('Create new database connection');
+    print("Create new database connection");
   }
 
   static Database database = Database();
@@ -10,7 +8,6 @@ class Database {
   factory Database.get(){
     return database;
   }
-
 }
 
 void main(){
